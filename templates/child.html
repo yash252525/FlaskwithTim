@@ -1,13 +1,13 @@
 {% extends "base.html" %}
 
 {% block title %}
-Homepage
+Dashboard
 {% endblock %}
 
 {% block style %}
     /* Remove box-shadow from the global div rule */
     div {
-        width: 70%;
+        width: 100%;
         padding: 2px;
         text-align: center;
         margin: 5px auto; /* Fixed spacing */
@@ -26,16 +26,22 @@ Homepage
 <div class="container">
     <div class="row">
         <!-- Card 1 -->
-        <div class="col-md-6">
+        <div class="col-md-3">
             <div class="card">
                 <img src="{{ url_for('static', filename='1_sMryEXZVPKFjGNcfSzE8Mw-768x432.jpeg') }}" class="card-img-top" alt="Placeholder image">
 
                 <div class="card-body">
                     <h5 class="card-title">DSA & Databases</h5>
+                    <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                        <div class="progress-bar" style="width: 10%"></div>
+                      </div>
+                      
                     <p class="card-text">Notes & Links</p>
                     <a href="https://www.notion.so/Data-Structure-Algorithms-161844635e97804b842ed7d2dbe1760c" class="btn btn-primary">Notion Notes</a>
                     <hr>
-                    <a href="https://www.geeksforgeeks.org/dsa-tutorial-learn-data-structures-and-algorithms/" class="btn btn-primary">Geek for Geeks</a>
+                    <a href="https://www.geeksforgeeks.org/dsa-tutorial-learn-data-structures-and-algorithms/" class="btn btn-primary">Geek for Geeks DSA</a>
+                     <hr>
+                     <a href="https://www.geeksforgeeks.org/what-is-database/" class="btn btn-primary">Geek for Geeks Databases</a>
                      <hr>
                     <a href="https://canvas.bham.ac.uk/courses/78940" class="btn btn-primary">Canvas DSA</a>
                 </div>
@@ -43,12 +49,16 @@ Homepage
         </div>
 
         <!-- Card 2 -->
-        <div class="col-md-6">
+        <div class="col-md-3">
             <div class="card">
                 <img src="{{ url_for('static', filename='0_Sqt3Soyk6U1LzxyU.jpeg') }}" class="card-img-top" alt="Placeholder image">
 
                 <div class="card-body">
                     <h5 class="card-title">Building Usable Software</h5>
+                    <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                        <div class="progress-bar" style="width: 10%"></div>
+                      </div>
+                      
                     <p class="card-text">Notes & Links</p>
                     <a href="https://www.notion.so/Building-usable-software-181844635e9780fcbd42c961c0215d6f" class="btn btn-primary">Notion Notes</a>
                      
@@ -57,6 +67,36 @@ Homepage
                 </div>
             </div>
         </div>
+
+        
+        <!-- Card 3-->
+        <div class="col-md-3">
+            <div class="card">
+                <img src="{{ url_for('static', filename='1_fHrAZJ1_L0Ff9dvVexL5_A.jpeg') }}" class="card-img-top" alt="Placeholder image">
+
+                <div class="card-body">
+                    <h5 class="card-title">Software Workshop 2</h5>
+                    <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                        <div class="progress-bar" style="width: 10%"></div>
+                      </div>
+                      
+                    <p class="card-text">Notes & Links</p>
+                    <a href="https://www.notion.so/Software-Workshop-2-181844635e97808a9022c1e73dcdccf8" class="btn btn-primary">Notion Notes</a>
+                     
+                    <hr>
+                    <a href="https://canvas.bham.ac.uk/courses/78939" class="btn btn-primary">Canvas</a>
+                    <hr>
+                    <a href="https://getbootstrap.com/docs/5.3/getting-started/introduction/" class="btn btn-primary">BootStrap</a>
+                    <hr>
+                    <a href="https://www.w3schools.com/html/" class="btn btn-primary">HTML W3School</a>
+                    <hr>
+                    <a href="https://www.w3schools.com/css/" class="btn btn-primary">CSS W3School</a>
+                    
+                    
+                </div>
+            </div>
+        </div>
+
     </div>
 </div>
 {% endblock %}
