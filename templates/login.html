@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{%block title %}
+    Login Page
+{% endblock %}
+
+{% block content %}
+<div class="container mt-5 d-flex justify-content-center">
+    <form action="#" method="post" class="border p-4 rounded shadow-sm text-center w-50">
+
+        <!-- Username Input (Inline) -->
+        <div class="mb-3 d-flex align-items-center">
+            <label for="name" class="form-label me-2">Username</label>
+            <input type="text" class="form-control w-75" id="name" name="nm" placeholder="Enter your name" required>
+        </div>
+
+        <!-- Password Input (Inline) -->
+        <div class="mb-3 d-flex align-items-center">
+            <label for="password" class="form-label me-2">Password</label>
+            <input type="password" class="form-control w-75" id="password" name="pswd" placeholder="Enter your password" >
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="btn btn-primary w-50">Login</button>
+
+    </form>
+</div>
+
+
+
+{% endblock %}
