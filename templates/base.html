@@ -42,35 +42,21 @@
 
   {% if dashboard_user %}
     <!-- Show custom navbar when logged in -->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <nav class="navbar navbar-expand-lg">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">{{ dashboard_user }}'s Custom Dashboard</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="https://leetcode.com/">Leetcode</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="https://www.hackerrank.com/dashboard">Hacker Rank</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="https://github.com/dashboard">Github</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="https://chatgpt.com/">ChatGPT</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="https://www.deepseek.com/">DeepSeek</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="https://www.linkedin.com/in/yash-zore-3092371a9/">Linkedin</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-            </li>
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item"><a class="nav-link active" href="https://leetcode.com/">Leetcode</a></li>
+            <li class="nav-item"><a class="nav-link" href="https://www.hackerrank.com/dashboard">Hacker Rank</a></li>
+            <li class="nav-item"><a class="nav-link" href="https://github.com/dashboard">Github</a></li>
+            <li class="nav-item"><a class="nav-link" href="https://chatgpt.com/">ChatGPT</a></li>
+            <li class="nav-item"><a class="nav-link" href="https://www.deepseek.com/">DeepSeek</a></li>
+            <li class="nav-item"><a class="nav-link" href="https://www.linkedin.com/in/yash-zore-3092371a9/">LinkedIn</a></li>
+            <li class="nav-item"><a class="nav-link" href="{{ url_for('passwordvault')}}">Password Vault</a></li>
             <div class="dropdown">
               <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Personal Finance
@@ -83,13 +69,14 @@
                 <li><a class="dropdown-item" href="https://wealthelite.in/client-login">WealthElite</a></li>
               </ul>
             </div>
-            <li class="nav-item">
-              <a class="nav-link" href="{{ url_for('logout')}}">Logout</a>
-            </li>
           </ul>
+          <!-- Logout button aligned to the right -->
+          <a href="{{ url_for('logout') }}" class="btn btn-danger ms-auto">Logout</a>
         </div>
       </div>
     </nav>
+    
+    
   {% else %}
     <!-- Show default navbar for login/signup pages -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary">

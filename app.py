@@ -42,5 +42,9 @@ def logout():
     return redirect(url_for("login"))
 
 
+@app.route("/passwordvault")
+def passwordvault():
+    return f"<h2>Password Vault comming soon !!!</h2>"
+
 if __name__ == "__main__":
     app.run(debug=True)
